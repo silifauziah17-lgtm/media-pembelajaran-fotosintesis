@@ -1,0 +1,385 @@
+/* ============================================
+   STYLE UTAMA - Multimedia Pembelajaran Fotosintesis
+   Tema: Alam & Tumbuhan
+   ============================================ */
+
+/* ===== Variabel Warna ===== */
+:root {
+  --hijau-daun: #2E7D32;
+  --hijau-muda: #81C784;
+  --hijau-pucat: #E8F5E9;
+  --kuning: #FDD835;
+  --kuning-lembut: #FFF9C4;
+  --putih: #FFFFFF;
+  --abu: #F5F7F5;
+  --teks: #1B3A1F;
+  --teks-lembut: #4F6B53;
+  --bayangan: 0 8px 24px rgba(46, 125, 50, 0.08);
+  --bayangan-hover: 0 12px 32px rgba(46, 125, 50, 0.16);
+  --radius: 16px;
+  --transisi: 0.3s ease;
+}
+
+/* ===== Reset ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--abu);
+  color: var(--teks);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--putih);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 14px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--hijau-daun);
+}
+
+.nav-logo .leaf {
+  font-size: 1.6rem;
+  animation: leafSway 3s ease-in-out infinite;
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-menu a {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: var(--teks-lembut);
+  transition: var(--transisi);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: var(--hijau-pucat);
+  color: var(--hijau-daun);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--hijau-daun);
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 60%, #FFF9C4 100%);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--hijau-daun);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.hero-content .subtitle {
+  font-size: 1.05rem;
+  color: var(--teks-lembut);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transisi);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--hijau-daun);
+  color: var(--putih);
+  box-shadow: var(--bayangan);
+}
+.btn-primary:hover {
+  background: #1B5E20;
+  transform: translateY(-2px);
+  box-shadow: var(--bayangan-hover);
+}
+
+.btn-secondary {
+  background: var(--putih);
+  color: var(--hijau-daun);
+  border: 2px solid var(--hijau-daun);
+}
+.btn-secondary:hover {
+  background: var(--hijau-pucat);
+  transform: translateY(-2px);
+}
+
+/* Hero Illustration */
+.hero-illustration {
+  position: relative;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 90px; height: 90px;
+  background: radial-gradient(circle, #FFEB3B 0%, #FDD835 70%, transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(253, 216, 53, 0.6);
+  animation: sunGlow 3s ease-in-out infinite;
+}
+
+@keyframes sunGlow {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(253, 216, 53, 0.6); }
+  50% { transform: scale(1.08); box-shadow: 0 0 60px rgba(253, 216, 53, 0.9); }
+}
+
+.plant {
+  font-size: 10rem;
+  animation: plantFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(46, 125, 50, 0.3));
+}
+
+@keyframes plantFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== STATISTIK ===== */
+.stats {
+  max-width: 1200px;
+  margin: -40px auto 0;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.stat-card {
+  background: var(--putih);
+  padding: 28px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--bayangan);
+  transition: var(--transisi);
+}
+.stat-card:hover { transform: translateY(-6px); box-shadow: var(--bayangan-hover); }
+
+.stat-icon { margin-bottom: 10px; }
+.stat-icon img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+  display:block;
+  margin:auto;
+}
+.stat-number { font-size: 2rem; font-weight: 700; color: var(--hijau-daun); }
+.stat-label { color: var(--teks-lembut); font-weight: 500; }
+
+/* ===== SECTION ===== */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--hijau-daun);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--teks-lembut);
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== KARTU FITUR ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: var(--putih);
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  transition: var(--transisi);
+  text-align: center;
+}
+.feature-card:hover { transform: translateY(-6px); box-shadow: var(--bayangan-hover); }
+
+.feature-icon {
+  width: 64px; height: 64px;
+  background: var(--hijau-pucat);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 16px;
+}
+
+.feature-card h3 { color: var(--hijau-daun); margin-bottom: 8px; }
+.feature-card p { color: var(--teks-lembut); font-size: 0.95rem; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--hijau-daun);
+  color: var(--putih);
+  padding: 50px 24px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer h4 { margin-bottom: 14px; font-size: 1.1rem; }
+.footer p { opacity: 0.9; font-size: 0.95rem; }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 8px; }
+.footer ul a { opacity: 0.9; transition: var(--transisi); }
+.footer ul a:hover { opacity: 1; padding-left: 4px; }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== FADE IN ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== LOADING ===== */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--putih);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+.loader.hide { opacity: 0; pointer-events: none; }
+.loader-leaf {
+  font-size: 3rem;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  background: linear-gradient(135deg, var(--hijau-daun), var(--hijau-muda));
+  color: var(--putih);
+  padding: 70px 24px 50px;
+  text-align: center;
+}
+.page-header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* jarak ikon dan teks */
+}
+
+.page-header h1 img {
+  width: 40px;
+  height: 40px;
+}
+.page-header p { opacity: 0.95; }
+
