@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi | Fotosintesis</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/materi.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="leaf">🌿</span> Fotosintesis</a>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cp-tujuan.html">CP & Tujuan</a></li>
+        <li><a href="materi.html">Materi</a></li>
+        <li><a href="video.html">Video Edukasi</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="profil.html">Profil</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>📖 Materi Pembelajaran</h1>
+    <p>Pilih materi yang ingin kamu pelajari di bawah ini</p>
+  </header>
+
+  <main class="section">
+    <!-- Animasi Fotosintesis -->
+    <h2 class="section-title">✨ Animasi Proses Fotosintesis</h2>
+    <p class="section-subtitle">Perhatikan bagaimana tumbuhan menggunakan cahaya matahari, air, dan CO₂ untuk menghasilkan glukosa dan oksigen.</p>
+    <div class="animasi-box">
+      <div class="anim-sun">☀️</div>
+      <div class="anim-co2">CO₂ 💨</div>
+      <div class="anim-o2">O₂ ⬆️</div>
+      <div class="anim-glukosa">🍬 Glukosa</div>
+      <div class="anim-plant">🌱</div>
+      <div class="anim-caption">Cahaya + Air + CO₂ → Glukosa + Oksigen</div>
+    </div>
+
+    <!-- Daftar Materi -->
+    <h2 class="section-title" style="margin-top:60px;">📚 Daftar Materi</h2>
+    <p class="section-subtitle">Klik kartu materi untuk membaca penjelasan lengkapnya.</p>
+    <div id="materiGrid" class="materi-grid"></div>
+
+    <!-- Detail Materi -->
+    <div id="materiDetail" class="materi-detail" style="margin-top:40px;"></div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="quiz.html" class="btn btn-primary">🏆 Uji Pemahaman dengan Quiz</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      © <span id="year"></span> Multimedia Pembelajaran Fotosintesis - IPA SMP.
+    </div>
+  </footer>
+
+  <script src="data/materi.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/materi.js"></script>
+</body>
+</html>

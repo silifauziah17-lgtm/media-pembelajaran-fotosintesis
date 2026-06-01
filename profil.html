@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil | Fotosintesis</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/materi.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .profile-members{
+      display:flex;
+      justify-content:center;
+      gap:50px;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+    }
+
+    .member-card{
+      text-align:center;
+    }
+
+    .member-card img{
+      width:220px;
+      height:220px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid #ffffff;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .member-card h3{
+      margin-top:15px;
+      color:#2E7D32;
+      font-size:22px;
+      font-weight:700;
+    }
+
+    .member-card p{
+      color:#555;
+      font-size:16px;
+      font-weight:600;
+      margin-top:5px;
+    }
+
+    .profile-info{
+      text-align:center;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .profile-info h2{
+      color:#2E7D32;
+      margin-bottom:10px;
+    }
+
+    .profile-info .role{
+      font-size:18px;
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .profile-meta{
+      margin-top:20px;
+      font-size:18px;
+      color:#333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="leaf">🌿</span> Fotosintesis
+      </a>
+
+      <button class="nav-toggle">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cp-tujuan.html">CP & Tujuan</a></li>
+        <li><a href="materi.html">Materi</a></li>
+        <li><a href="video.html">Video Edukasi</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="profil.html">Profil</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+  <h1>
+    <img src="assets/images/profil.png" alt="Profil">
+    <span>Profil Pengembang</span>
+  </h1>
+  <p>Tentang pembuat media pembelajaran ini</p>
+</header>
+
+  <main class="section">
+
+  <div class="profile-card fade-in">
+
+    <!-- INFORMASI -->
+
+    <div class="profile-info">
+
+      <h2>Profil Kelompok</h2>
+
+      <p class="role">
+        Mahasiswa Pendidikan Teknologi Informasi
+      </p>
+
+      <p>
+        Multimedia Pembelajaran Interaktif Fotosintesis ini disusun sebagai
+        tugas mata kuliah Animasi dan Multimedia. Media pembelajaran ini
+        dirancang untuk membantu siswa Kelas VII SMP memahami konsep
+        fotosintesis melalui materi interaktif, video edukasi, dan kuis
+        pembelajaran yang menarik.
+      </p>
+
+    </div>
+
+    <!-- FOTO ANGGOTA -->
+
+    <div class="profile-members">
+
+      <div class="member-card">
+        <img src="assets/images/MAIDA.jpeg" alt="Maida Nur Azizah">
+        <h3>Maida Nur Azizah</h3>
+        <p>NIM: 23833025</p>
+      </div>
+
+      <div class="member-card">
+        <img src="assets/images/SILI.jpeg" alt="Sili Fauziah H">
+        <h3>Sili Fauziah H</h3>
+        <p>NIM: 23832004</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="cp-card fade-in" style="margin-top:30px;">
+    <h2>💡 Tentang Media Pembelajaran</h2>
+
+    <p>
+      Multimedia Pembelajaran Interaktif Fotosintesis dirancang untuk siswa
+      Kelas VII SMP sesuai Kurikulum Merdeka.
+    </p>
+
+    <p>
+      Media ini menggabungkan materi pembelajaran, video edukasi,
+      animasi sederhana, dan kuis interaktif sehingga pembelajaran menjadi
+      lebih menarik, efektif, dan mudah dipahami.
+    </p>
+
+    <p>
+      Website ini dibangun menggunakan HTML, CSS, dan JavaScript sehingga
+      dapat dijalankan langsung melalui browser.
+    </p>
+
+  </div>
+
+</main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      © <span id="year"></span>
+      Multimedia Pembelajaran Fotosintesis - IPA SMP.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
