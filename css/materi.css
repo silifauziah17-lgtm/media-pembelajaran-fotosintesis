@@ -1,0 +1,310 @@
+/* ============================================
+   MATERI, CP, VIDEO, PROFIL
+   ============================================ */
+
+/* ===== CP & Tujuan ===== */
+.cp-card {
+  background: var(--putih);
+  padding: 36px;
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  margin-bottom: 30px;
+}
+.cp-card h2 {
+  color: var(--hijau-daun);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cp-card p { color: var(--teks-lembut); margin-bottom: 12px; }
+.cp-card ol, .cp-card ul { padding-left: 22px; }
+.cp-card li { margin-bottom: 10px; color: var(--teks-lembut); }
+
+/* ===== Materi ===== */
+.materi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.materi-card {
+  background: var(--putih);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--bayangan);
+  transition: var(--transisi);
+  cursor: pointer;
+}
+.materi-card:hover { transform: translateY(-6px); box-shadow: var(--bayangan-hover); }
+
+.materi-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-daun));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3.5rem;
+  color: var(--putih);
+}
+
+.materi-body { padding: 20px; }
+.materi-body .badge {
+  display: inline-block;
+  background: var(--hijau-pucat);
+  color: var(--hijau-daun);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.materi-body h3 { color: var(--hijau-daun); margin-bottom: 8px; }
+.materi-body p { color: var(--teks-lembut); font-size: 0.92rem; }
+
+/* ===== Detail Materi ===== */
+.materi-detail {
+  background: var(--putih);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--bayangan);
+  margin-bottom: 30px;
+  display: none;
+}
+.materi-detail.active { display: block; animation: fadeUp 0.5s ease; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.materi-detail h2 { color: var(--hijau-daun); margin-bottom: 16px; }
+.materi-detail h3 { color: var(--hijau-daun); margin: 22px 0 10px; font-size: 1.15rem; }
+.materi-detail p { margin-bottom: 14px; color: var(--teks-lembut); text-align: justify; }
+.materi-detail ul, .materi-detail ol { padding-left: 22px; margin-bottom: 14px; }
+.materi-detail li { margin-bottom: 8px; color: var(--teks-lembut); }
+.materi-detail .poin {
+  background: var(--hijau-pucat);
+  padding: 18px 22px;
+  border-radius: 12px;
+  border-left: 4px solid var(--hijau-daun);
+  margin-top: 16px;
+}
+.materi-detail .poin h4 { color: var(--hijau-daun); margin-bottom: 10px; }
+.materi-detail .poin p { color: var(--teks); margin-bottom: 6px; }
+
+.materi-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Animasi Fotosintesis ===== */
+.animasi-box {
+  background: linear-gradient(180deg, #BBDEFB 0%, #C8E6C9 60%, #8D6E63 100%);
+  border-radius: var(--radius);
+  padding: 40px 20px;
+  margin: 30px 0;
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+  box-shadow: var(--bayangan);
+}
+
+.anim-sun {
+  position: absolute;
+  top: 20px; left: 30px;
+  font-size: 3rem;
+  animation: sunGlow 3s ease-in-out infinite;
+}
+
+.anim-plant {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  animation: plantFloat 4s ease-in-out infinite;
+}
+
+.anim-arrow {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--hijau-daun);
+}
+
+.anim-co2 {
+  position: absolute;
+  top: 100px; right: 40px;
+  font-size: 1.6rem;
+  color: #455A64;
+  font-weight: 700;
+  animation: drift 3s ease-in-out infinite;
+}
+
+.anim-o2 {
+  position: absolute;
+  top: 80px; left: 50%;
+  font-size: 1.6rem;
+  color: #1976D2;
+  font-weight: 700;
+  animation: rise 3s ease-in-out infinite;
+}
+
+.anim-glukosa {
+  position: absolute;
+  bottom: 130px; right: 30%;
+  font-size: 1.4rem;
+  color: var(--hijau-daun);
+  font-weight: 700;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(-30px); opacity: 0.6; }
+}
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-60px); opacity: 0; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.anim-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--hijau-daun);
+}
+
+/* ===== Video ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.video-card {
+  background: var(--putih);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--bayangan);
+  transition: var(--transisi);
+}
+.video-card:hover { transform: translateY(-4px); box-shadow: var(--bayangan-hover); }
+
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #000;
+}
+.video-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+.video-body { padding: 20px; }
+.video-body h3 { color: var(--hijau-daun); margin-bottom: 8px; }
+.video-body p { color: var(--teks-lembut); font-size: 0.95rem; }
+
+/* ===== Profil ===== */
+
+.profile-card {
+  background: var(--putih);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--bayangan);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-info {
+  max-width: 850px;
+  margin-bottom: 40px;
+}
+
+.profile-info h2 {
+  color: var(--hijau-daun);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.profile-info .role {
+  color: var(--teks-lembut);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  color: var(--teks-lembut);
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.profile-meta {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--hijau-daun);
+}
+
+/* FOTO ANGGOTA */
+
+.profile-members {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.member-card {
+  text-align: center;
+}
+
+.member-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--putih);
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.25);
+}
+
+.member-card h3 {
+  margin-top: 15px;
+  color: var(--hijau-daun);
+  font-size: 1.2rem;
+}
+
+.member-card p {
+  color: var(--teks-lembut);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Responsive HP */
+
+@media (max-width: 768px) {
+  .profile-members {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .member-card img {
+    width: 180px;
+    height: 180px;
+  }
+}
