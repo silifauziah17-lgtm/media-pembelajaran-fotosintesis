@@ -382,4 +382,58 @@ img { max-width: 100%; display: block; }
   height: 40px;
 }
 .page-header p { opacity: 0.95; }
+/* ===== NAVIGASI HALAMAN ===== */
+.navigation-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin:40px auto;
+  flex-wrap:wrap;
+}
+
+.nav-btn{
+  display:inline-block;
+  background:var(--hijau-daun);
+  color:var(--putih);
+  text-decoration:none;
+  padding:12px 25px;
+  border-radius:12px;
+  font-weight:600;
+  transition:var(--transisi);
+  box-shadow:var(--bayangan);
+}
+
+.nav-btn:hover{
+  background:#1B5E20;
+  transform:translateY(-3px);
+  box-shadow:var(--bayangan-hover);
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .navigation-buttons{
+    flex-direction:column;
+  }
+
+  .nav-btn{
+    width:100%;
+    text-align:center;
+    max-width:300px;
+  }
+}
+.disabled-btn{
+  pointer-events:none;
+  opacity:0.5;
+  cursor:not-allowed;
+}
+.stat-card{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.stat-card:hover{
+  transform: translateY(-5px);
+}
 
