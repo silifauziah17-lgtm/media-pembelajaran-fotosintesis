@@ -45,10 +45,14 @@
 }
 
 .login-illustration .big-leaf {
-  font-size: 9rem;
-  margin-bottom: 20px;
-  animation: plantFloat 4s ease-in-out infinite;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+  margin-bottom: 10px;
+}
+
+.login-illustration .big-leaf img{
+  width: 300px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .login-illustration h2 { font-size: 1.6rem; margin-bottom: 10px; }
@@ -116,3 +120,28 @@
 .alert.show { display: block; }
 .alert-error { background: #FFEBEE; color: #C62828; border-left: 4px solid #C62828; }
 .alert-success { background: #E8F5E9; color: var(--hijau-daun); border-left: 4px solid var(--hijau-daun); }
+.login-illustration{
+    text-align: center;
+}
+
+.login-illustration h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-illustration p{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+.login-illustration h2{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.login-illustration p{
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+}
