@@ -168,3 +168,42 @@
   color: var(--teks-lembut);
   font-size: 0.9rem;
 }
+/* Dropdown Quiz */
+.dropdown-box{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.dropdown-box select{
+  flex:1;
+  padding:10px 12px;
+  border:2px solid #dce5dc;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* Tombol Cek Jawaban */
+#cekDropdown{
+  background:#2196f3 !important;
+  color:white !important;
+  padding:7px 12px !important;
+  font-size:13px !important;
+  min-width:100px !important;
+  height:36px !important;
+  border-radius:6px !important;
+}
+
+#cekDropdown:hover{
+  background:#1976d2 !important;
+}
+.quiz-options label.correct{
+  background:#d4edda;
+  border:2px solid #28a745;
+}
+
+.quiz-options label.wrong{
+  background:#f8d7da;
+  border:2px solid #dc3545;
+}
