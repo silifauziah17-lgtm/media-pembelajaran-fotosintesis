@@ -17,6 +17,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="cp-tujuan.html">CP & Tujuan</a></li>
         <li><a href="materi.html">Materi</a></li>
+        <li><a href="kesimpulan.html">Kesimpulan</a></li>
         <li><a href="video.html">Video</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="profil.html">Profil</a></li>
@@ -36,15 +37,26 @@
       <div id="quizResult" class="quiz-card quiz-result" style="margin-top:20px;"></div>
     </div>
   </main>
-
+<div class="navigation-buttons">
+  <a href="video.html" class="nav-btn">⬅ Sebelumnya</a>
+  <a href="index.html" class="nav-btn">🏠 Home</a>
+  <a href="profil.html" class="nav-btn">Selanjutnya ➡</a>
+</div>
   <footer class="footer">
     <div class="footer-bottom">
       © <span id="year"></span> Multimedia Pembelajaran Fotosintesis - IPA SMP.
     </div>
   </footer>
-
   <script src="data/quiz.js"></script>
   <script src="js/main.js"></script>
   <script src="js/quiz.js"></script>
+  <script>
+console.log(localStorage.getItem("materiSelesai"));
+
+if(localStorage.getItem("materiSelesai") !== "ya"){
+    alert("Silakan pelajari materi terlebih dahulu sampai selesai.");
+    window.location.href = "materi.html";
+}
+</script>
 </body>
 </html>
