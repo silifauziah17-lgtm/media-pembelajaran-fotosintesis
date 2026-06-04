@@ -17,6 +17,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="cp-tujuan.html">CP & Tujuan</a></li>
         <li><a href="materi.html">Materi</a></li>
+        <li><a href="kesimpulan.html">Kesimpulan</a></li>
         <li><a href="video.html">Video</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="profil.html">Profil</a></li>
@@ -52,10 +53,28 @@
     <div id="materiDetail" class="materi-detail" style="margin-top:40px;"></div>
 
     <div style="text-align:center; margin-top:40px;">
-      <a href="quiz.html" class="btn btn-primary">🏆 Uji Pemahaman dengan Quiz</a>
-    </div>
-  </main>
 
+  <button id="selesaiMateri" class="btn btn-secondary">
+    ✅ Saya Sudah Membaca Materi
+  </button>
+
+  <br><br>
+
+  <a href="quiz.html" id="quizBtn" class="btn btn-primary disabled-btn">
+    🏆 Uji Pemahaman dengan Quiz
+  </a>
+
+  <p id="infoQuiz" style="margin-top:10px;">
+    Klik tombol "Saya Sudah Membaca Materi" untuk membuka kuis.
+  </p>
+
+</div>
+  </main>
+<div class="navigation-buttons">
+  <a href="cp-tujuan.html" class="nav-btn">⬅ Sebelumnya</a>
+  <a href="index.html" class="nav-btn">🏠 Home</a>
+  <a href="kesimpulan.html" class="nav-btn">Selanjutnya ➡</a>
+</div>
   <footer class="footer">
     <div class="footer-bottom">
       © <span id="year"></span> Multimedia Pembelajaran Fotosintesis - IPA SMP.
@@ -65,5 +84,18 @@
   <script src="data/materi.js"></script>
   <script src="js/main.js"></script>
   <script src="js/materi.js"></script>
+<script>
+document.getElementById("selesaiMateri").addEventListener("click", function(){
+
+    localStorage.setItem("materiSelesai","ya");
+
+    document.getElementById("quizBtn")
+      .classList.remove("disabled-btn");
+
+    document.getElementById("infoQuiz").innerHTML =
+      "Materi telah selesai dipelajari. Kuis sekarang dapat dikerjakan.";
+
+});
+</script>
 </body>
 </html>
